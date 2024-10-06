@@ -6,11 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .ht {
+            color: red;
+            font-weight: bold;
+            font-size: 20px; /* 초기 글씨 크기 */
+            transition: font-size 0.5s; /* 크기 변화의 전환 효과 */
+        }
+    </style>
 </head>
 <body>
     <h2>
-    Hello, This is bapo-test index Page
-        PUSH 추가
+    미주야 안녕 잘 보여? <span class="ht"> ♥ </span>
     </h2>
 </body>
 </html>
+
+<script>
+    const element = document.querySelector('.ht');
+
+    setInterval(() => {
+        // 글씨 크기를 키움
+        element.style.fontSize = '40px';
+
+        // 1초 후에 글씨 크기를 다시 줄임
+        setTimeout(() => {
+            element.style.fontSize = '20px';
+        }, 1000); // 1초 후에 원래 크기로 돌아감
+    }, 2000); // 2초 간격으로 반복
+</script>
